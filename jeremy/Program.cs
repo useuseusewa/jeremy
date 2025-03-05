@@ -14,9 +14,10 @@ public class Calculator
                 Console.WriteLine("Некорректный ввод числа. Попробуйте снова.");
                 continue;
             }
-
+//произошло изменение!
+            
             Console.WriteLine("Введите оператор (+, -, *, /):");
-            string operation = Console.ReadLine();
+            string operation = Console.ReadLin();
 
             Console.WriteLine("Введите второе число:");
             if (!double.TryParse(Console.ReadLine(), out double num2))
