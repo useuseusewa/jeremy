@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class Calculator
 {
@@ -14,12 +14,11 @@ public class Calculator
                 Console.WriteLine("Некорректный ввод числа. Попробуйте снова.");
                 continue;
             }
-//произошло изменение!
-            
+
             Console.WriteLine("Введите оператор (+, -, *, /):");
-            string operation = Console.ReadLin();
-//произошло еще одно изменение! (
-           
+            string operation = Console.ReadLine();
+
+            Console.WriteLine("Введите второе число:");
             if (!double.TryParse(Console.ReadLine(), out double num2))
             {
                 Console.WriteLine("Некорректный ввод числа. Попробуйте снова.");
@@ -27,8 +26,7 @@ public class Calculator
             }
 
             double result = 0;
-            int a = 4;
-            
+
             try
             {
                 switch (operation)
@@ -42,7 +40,7 @@ public class Calculator
                     case "*":
                         result = num1 * num2;
                         break;
-                    case ":":
+                    case "/":
                         if (num2 == 0)
                         {
                             Console.WriteLine("Деление на ноль!");
