@@ -18,8 +18,8 @@ public class Calculator
             
             Console.WriteLine("Введите оператор (+, -, *, /):");
             string operation = Console.ReadLin();
-
-            Console.WriteLine("Введите второе число:");
+//произошло еще одно изменение! (
+           
             if (!double.TryParse(Console.ReadLine(), out double num2))
             {
                 Console.WriteLine("Некорректный ввод числа. Попробуйте снова.");
@@ -27,7 +27,8 @@ public class Calculator
             }
 
             double result = 0;
-
+            int a = 4;
+            
             try
             {
                 switch (operation)
@@ -41,7 +42,7 @@ public class Calculator
                     case "*":
                         result = num1 * num2;
                         break;
-                    case "/":
+                    case ":":
                         if (num2 == 0)
                         {
                             Console.WriteLine("Деление на ноль!");
